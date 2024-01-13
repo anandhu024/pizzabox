@@ -1,0 +1,113 @@
+ion-content{
+    --background:#6b45bc;
+  
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+  
+        ion-button{
+            height: 60px;
+            width: 60px;
+  
+  
+            ion-icon{
+                font-size: 2rem;
+            }
+        }
+    }
+  
+    .card{
+        height: 75%;
+        width: 100%;
+        background: #fff;
+        position: flex;
+        bottom: 0;
+        border-radius: 3rem 3rem  ;
+        padding: 2rem;
+  
+  
+        .image{
+            position: absolute;
+            top:-6.5rem;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+  
+        }
+  
+        .card-title
+        {
+          margin-top: 12%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2.2rem;
+  
+        }
+        h1{
+          display: absolute;
+          font-weight: 700;
+          font-size: 2.1rem;
+          color: #0c0c0b;
+  
+        }
+        p{
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: #ffb800;
+        }
+        sub{
+          font-size: 1.2rem;
+          margin-right: -0.5rem;
+        }
+  
+        .about{
+          margin-bottom: -2rem;
+          h1{
+            color: #b9b9b9;
+            font-size: medium;
+            font-weight: 600;
+  
+          }
+          p{
+          margin-top: -9%;
+            font-size: 2.1rem;
+            line-height: 1.6;
+            color: #171717;
+            .box{
+              box-sizing: border-box;
+            }
+          }
+        }
+    }
+  
+    .actions{
+      border: 1px solid #c7c7c7;
+      border-radius: 2rem;
+  
+      .counter{
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #6b45bc;
+      }
+  
+      ion-button{
+        --background:#fff;
+        --box-shadow:0px 2px 10px grey;
+        --padding-start:0;
+        --padding-end:0;
+        --padding-top:0;
+        --padding-bottom:0;
+      }
+    }
+  
+    .quantity{
+      color: #0c0c0b;
+    }
+  }

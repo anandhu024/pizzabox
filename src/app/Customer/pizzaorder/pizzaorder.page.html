@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Pizza Box</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+  <form (ngSubmit)="update()" [formGroup]='pizzaorder'>  
+
+    <ion-item *ngFor="let p of pizza;">
+      <div>
+        <img [src] ="p.image" width="200px">
+      </div>
+  <ion-input type="filereadonly" readonly id="name" (change)="handlefile($event)" required></ion-input>
+</ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Pizza Name</ion-label>
+      <ion-input type="text" readonly formControlName="pizzaname"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Pizza Description</ion-label>
+      <ion-input type="text" readonly formControlName="pizzadescription"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Pizza Price</ion-label>
+      <ion-input type="numer" readonly formControlName="Price"></ion-input>
+    </ion-item>
+
+
+      <ion-input type="date"hidden formControlName="date"></ion-input>
+
+
+      <ion-item>
+        <ion-label position="floating">Pizza Size</ion-label>
+        <ion-input type="text" readonly formControlName="sizename"></ion-input>
+      </ion-item>
+  
+
+    <ion-item>
+      <ion-label position="floating">Pizza Quantity</ion-label>
+      <ion-input type="tel" formControlName="quantity"  (ionChange)="view()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Delivery Address</ion-label>
+      <ion-input type="text" formControlName="daddress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Total Amount</ion-label>
+      <ion-input type="numer" readonly formControlName="tamount" value="{{totalamount}}" placeholder="{{totalamount}}"></ion-input>
+    </ion-item>
+
+
+    
+    <ion-button type="submit" shape="round"  >ORDER</ion-button>
+
+    
+
+  </form>
+</ion-content> -->
+
+<ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/Customer/orindex">
+        <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/tabs/orindex">
+        <ion-icon slot="icon-only" color="light" name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <!-- food images -->
+  <form (ngSubmit)="update()" [formGroup]='pizzaorder'>  
+  <div class="card" >
+    <div class="images" *ngFor="let p of pizza;">
+      <ion-img [src]="p.image"></ion-img>
+    </div>
+
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">
+            <!-- <ion-label position="floating">Pizza Name</ion-label> -->
+            <ion-input type="text" readonly formControlName="pizzaname"></ion-input>
+        </h1>
+        <p class="ion-no-margin">
+          <!-- <ion-label position="floating">Pizza Price</ion-label> -->
+       <ion-input type="numer" readonly formControlName="Price">₹</ion-input>
+        </p>
+      </div>
+    </div>
+    <ion-input type="date"hidden formControlName="date"></ion-input>
+
+    <div class="about">
+      <h1>Pizza Description</h1>
+      <p>
+        <ion-input type="text" readonly formControlName="pizzadescription"></ion-input>
+      </p>
+    </div>
+
+    <div class="about">
+      <h1>Pizza Size</h1>
+      <p>
+        <ion-input type="text" readonly formControlName="sizename"></ion-input>
+      </p>
+    </div>
+
+    <div class="about">
+      <h1>Pizza Quantity</h1>
+      <p>
+        <ion-input type="number" formControlName="quantity"  (ionChange)="view()"></ion-input>
+      </p>
+    </div>
+
+
+    <!-- <div class="about">
+      <h1>Delivery Address</h1>
+      <p class="box">
+        <ion-input type="text" formControlName="daddress"></ion-input>
+      </p>
+    </div> -->
+
+    <ion-button type="submit" shape="round"  >Pay:
+      <ion-input readonly formControlName="tamount" value="{{totalamount}}" placeholder="{{totalamount}}"></ion-input>
+    </ion-button>
+
+
+  </div>
+</form> 
+
+</ion-content>

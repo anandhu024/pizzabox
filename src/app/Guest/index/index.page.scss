@@ -1,0 +1,89 @@
+
+
+
+
+ion-slides{
+    height: 100%;
+    ion-slide{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no repeat;
+    }
+    .topRight{
+        align-items: initial;
+        justify-content: flex-end;
+      
+    }
+    .bottom{
+
+        align-items:end;
+        justify-content:last baseline;
+    }
+    .transformButton{
+    margin-top: 10em;
+    transform:translateY(40vh);
+    width: 50vw;
+    // background-color:#ffde59;
+    margin-top: 100px;
+    // padding: 20px;
+    // padding-right: 1px;
+    // padding-left: 10px;
+    // border-top-right-radius: 60px;
+    // border-bottom-right-radius: 60px;
+    // display: flex;
+    // align-items: center;
+    // font-size: 1.5rem;
+    // font-weight: 500;
+    // justify-content: flex-end;
+
+    }
+
+    p{
+    transform:translateY(55vh);
+    width: 100vw;
+    }
+    h6{
+        color: #0c0c0b;
+        font-weight: 100;
+        font-size: 1.3rem;
+        transform:translateY(90vh);
+    width: 100vw; 
+    }
+    h4{
+        color: #0c0c0b;
+        font-weight: 100;
+        font-size: 1.3rem;
+        transform:translateY(90vh);
+        // transform:translateX(-15vh);
+
+    width: 100vw; 
+    }
+    h5{
+        color: #5433d7;
+        font-weight: 100;
+        font-size: 1.3rem;
+        transform:translateX(-9vh);
+        transform:translateY(8vh);
+    width: 215vw; 
+text-align: center;
+    }
+
+.transformButton1{
+    width: 50vw;
+
+    transform:translateY(60vh);
+
+}
+#LetsStart1{
+    position: absolute;
+    right: 90px;
+   }
+
+}
+#LetsStart{
+ position: absolute;
+ right: 90px;
+}
+
+     
+     

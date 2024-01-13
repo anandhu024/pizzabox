@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Desserts Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <form (ngSubmit)="submit()" [formGroup]='dessertreg'>
+      <div class="container" >
+        <div class="title"><b><h2>Desserts  Registration</h2></b></div><br>
+
+
+        <label><b>Dessert Name</b></label>
+        <input type="text" placeholder="Dessert name" formControlName="dessertname" style="color: white;">
+
+        <label><b>Dessert Description</b></label>
+        <input type="text" placeholder="Dessert  Description"  formControlName="dessertsdescription" style="color: white;" >
+     
+        <!-- <label><b>Last Name</b></label> (change)="this.changePhoneNumber()"
+        <input type="text" placeholder="Enter Last Name" > -->
+
+   <label><b>Dessert Images</b></label>  <br>  <br>
+        <input type="file" id="name" (change)="handlefile($event)" style="color: white;" >
+        <br>  <br>  <br>  <br>
+        <!-- <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" formControlName="password" style="color: white;"> -->
+        
+        <!-- <label><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" > -->
+
+         <!-- <label><b>Select Category</b></label>
+        <div>
+            <select class="custom_select"  placeholder="Select Category" formControlName="categoryname">
+              <option value="">Select Category</option>
+              <option *ngFor="let c of category" value="{{ c.categoryname }}">{{ c.categoryname }}</option>
+            </select>
+          </div>
+         
+
+          <label><b>Select Size</b></label>
+          <div>
+              <select class="custom_select"  placeholder="Select Size" formControlName="sizename">
+                <option value="">Select Size</option>
+                <option  *ngFor="let s of size" value="{{ s.Size }}">{{ s.Size }}</option>
+              </select>
+            </div> -->
+        
+
+            <label><b>Dessert Price</b></label>
+            <input type="number" placeholder="Dessert price"  formControlName="dessertsprice" style="color: white;" >
+
+
+         <button _ngcontent-pfy-c143="" type="submit">Submit</button>
+  </div>
+    </form>
+    </ion-content>

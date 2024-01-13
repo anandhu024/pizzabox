@@ -1,0 +1,33 @@
+.container {
+    height: 250px;
+  }
+  
+  ion-col.red {
+    background-color: #ff6961;
+  }
+  
+  ion-col.green {
+    background-color: #77dd77;
+  }
+  
+  ion-col.blue {
+    background-color: #add8e6;
+  }
+  
+  ion-col.purple {
+    background-color: #b19cd9;
+  }
+  
+  ion-col {
+    text-align: center;
+    margin-bottom: 15px;
+    // padding-top: 10px;
+    // padding-left: 25px;
+
+    padding: 25px;
+    border: 10px solid black;
+  }
+  ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }

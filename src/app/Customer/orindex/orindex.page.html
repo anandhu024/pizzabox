@@ -1,0 +1,125 @@
+<ion-buttons slot="start"> 
+  <ion-menu-button></ion-menu-button> 
+  </ion-buttons>
+
+<ion-content>
+<div class="header">
+  <h1>Menu</h1>
+  <div>
+    <ion-img src="../../../assets/img/pizza (2).png"></ion-img>
+  </div>
+</div>
+
+<ion-card>
+<ion-grid>
+  <ion-row>
+    <div class="categories">
+    <ion-col size="3" offset="0">
+      <ion-label>
+        <ion-img src="../../../assets/img/ALL.jpg" [routerLink]= "['/Customer/orindex']" ></ion-img>
+       <p class="ion-no-margin" style="
+       margin-top: 3px;
+       color: black;
+       margin-left: 20px;"> All</p>
+      </ion-label>
+    </ion-col>
+
+    <ion-col size="3" offset="0">
+      <ion-img src="../../../assets/img/pizza icon.jpg" [routerLink]= "['/Customer/index']"></ion-img>
+  <p class="ion-no-margin" style="
+  margin-top: 3px;
+  color: black;
+  margin-left: 11px;"> Pizza</p>
+    </ion-col>
+
+    <ion-col size="3" offset="0">
+      <ion-img src="../../../assets/img/deslogo.webp" [routerLink]= "['/Customer/desertindex']"></ion-img>
+      <p class="ion-no-margin" style="
+      margin-top: 3px;
+      color: black;
+      margin-left: 5px;"> Desserts</p>
+    </ion-col>
+  </div>
+  </ion-row>
+</ion-grid>
+</ion-card>
+
+<!-- category view -->
+<!-- <div class="categories">
+  <div class="wrapper" >
+    <div class="image-card">
+      <ion-item>
+      <ion-item >
+      <ion-label>
+  <ion-img src="../../../assets/img/all.png" [routerLink]= "['/Customer/orindex']" ></ion-img>
+ <p class="ion-no-margin"  style="padding: 12px 31px 0px;"> All</p>
+</ion-label>
+</ion-item>
+<ion-item>
+  <ion-label>
+  <ion-img src="../../../assets/img/pizzalogo.jpg" [routerLink]= "['/Customer/index']"></ion-img>
+  <p class="ion-no-margin"> Pizza</p>
+</ion-label>
+</ion-item>
+<ion-item>
+  <ion-label>
+  <ion-img src="../../../assets/img/desserts.webp" [routerLink]= "['/Customer/desertindex']"></ion-img>
+  <p class="ion-no-margin"> Desserts</p>
+</ion-label>
+</ion-item>
+</ion-item>
+</div>
+</div>
+</div> -->
+
+
+
+<!-- pizza view -->
+<h1 class="list-header">Popular</h1>
+  <div class="food-list">
+    <ion-card  *ngFor="let p of pizza;" >
+     <div class="card">
+             <img  [src] ="p.image" width="300px" [routerLink]= "['/Customer/pizzaorder',p.collection_pizzaId]"><br>
+             <div class="card-content">
+              <h3 class="title">
+            {{p.pizzaname}}
+            
+          </h3>
+          <h2 class="subtitle">
+            ${{p.Price}}
+          </h2>
+          <ion-buttons>
+            <ion-button [routerLink]= "['/Customer/pizzaorder',p.collection_pizzaId]">
+              <ion-icon slot="icon-only" name="add" ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          </div>
+        </div>
+      </ion-card>
+  </div>
+
+
+  <!-- desserts view -->
+  <h1 class="list-header">Features</h1>
+  <div class="food-list">
+  <ion-card *ngFor="let d of dessert;">
+    <div class="card">
+     
+    <img [src] ="d.image" width="300px" [routerLink]= "['/Customer/dessertorder',d.collection_dessertId]"><br><br>
+    <div class="card-content">
+
+      <h3 class="title">{{d.dessertname}}</h3>
+
+      <h2 class="subtitle">₹{{d.dessertsprice}}</h2>
+
+      <ion-buttons>
+        <ion-button [routerLink]= "['/Customer/dessertorder',d.collection_dessertId]">
+          <ion-icon slot="icon-only" name="add" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+</div>
+</div>
+</ion-card>
+</div>
+</ion-content>

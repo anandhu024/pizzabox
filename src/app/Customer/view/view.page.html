@@ -1,0 +1,25 @@
+
+<ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/Customer/orindex">
+        <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/tabs/orindex">
+        <ion-icon slot="icon-only" color="light" name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <!-- food images -->
+  <form (ngSubmit)="update()" [formGroup]='pizzaorder'>
+  <div class="card" *ngFor="let p of pizza;">
+    <div class="images">
+      <ion-img [src]="p.image"></ion-img>
+    </div>
+  </div>
+</form> 
+
+</ion-content>

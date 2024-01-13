@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Feedback/Complaint Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <form form (ngSubmit)="update()" [formGroup]='fedback'>
+      <div class="container" >
+        <div class="title"><b><h2>Complaint form</h2></b></div><br>
+        <label><b>Complaint</b></label>
+        <input type="text" placeholder="Any Complaint you have mention it" required formControlName="complaint" style="color: white;">
+
+        <label><b>Complaint product Images</b></label>  <br>  <br>
+        <input type="file" id="name" (change)="handlefile($event)" style="color: white;" >
+        <br>  <br>  <br>  <br>
+
+
+      <ion-input type="textarea" readonly hidden formControlName="rcomplaint"></ion-input>
+        
+         <button _ngcontent-pfy-c143="" type="submit">Submit</button>
+  </div>
+    </form>
+    </ion-content>

@@ -1,0 +1,295 @@
+// .plus {
+//     background: #3cec97;
+//     width: 109px;
+//     height: 55px;
+//     position: absolute;
+//     border-radius: 10px;
+//     top: -6px;
+//     right: 15px;
+//     color: #fff;
+//     font-size: 55px;
+//     text-align: left;
+//     line-height: 75px;
+//     box-shadow: 0px 5px 20px #3cec97;
+//   }
+
+ion-content{
+  --background: #fff url('https://img.freepik.com/premium-vector/blue-white-gray-turquoise-background-gradient-wallpaper-background-vector-illustration_172010-1295.jpg') no-repeat center center / cover !important;
+  --background-size: cover !important;
+  --background-attachment: fixed;
+
+ }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #7b56ff;
+  font-family: "Saira Semi Condensed", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+//   .app {
+//     width: 360px;
+//     height: 740px;
+//     background: var(--primary);
+//     background-image: linear-gradient(-135deg, #7b56ff 40%, #52e2ff 120%);
+//     background-size: cover;
+//     color: #fff;
+//     border-radius: 30px;
+//     margin: 0 auto;
+//     margin-top: 30px;
+//     overflow: hidden;
+//     box-shadow: 0px 10px 20px #888;
+//   }
+
+.top {
+  height: fit-content;
+  padding-top: 10px;
+  margin-top: 0px;
+}
+
+.notifications {
+  position: relative;
+  float: right;
+  font-size: 28px;
+  margin-right: 30px;
+  color: #d5b8ff;
+}
+
+.notifications .dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: #ffa54f;
+  border-radius: 100%;
+  margin-top: 0px;
+  left: 12px;
+  top: 10px;
+}
+
+.top-text {
+  margin: 20px 40px;
+  padding-top: 0px;
+}
+
+.welcome {
+  color: #d5b8ff;
+  font-size: 22px;
+  line-height: 0.7;
+}
+
+.name {
+  font-size: 34px;
+}
+
+.balance {
+  color: #d5b8ff;
+  line-height: 0.7;
+}
+
+.amount {
+  font-size: 40px;
+ 
+}
+
+.amount .fa-dollar-sign {
+  color: #f4f3f5;
+  font-size: 28px;
+}
+
+.amount .noughts {
+  font-size: 26px;
+}
+
+.fa-caret-right {
+  color: #efecf3;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.main {
+  // background: #fff;
+  // height: 83%;
+  color: #555;
+  border-radius: 30px;
+  position: relative;
+}
+
+.plus {
+  background: #3cec97;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 10px;
+  top: 22px;
+  right: 35px;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0px 5px 20px #3cec97;
+}
+
+.main-text {
+  margin: 24px 40px;
+  padding-top: 31px;
+}
+
+.transactions {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.date {
+  color: #999;
+  font-size: 18px;
+}
+
+.fa-caret-down {
+  color: #e1e1e1;
+}
+
+.transaction-grid {
+  margin: 30px 40px;
+}
+
+.row-one,
+.row-two,
+.row-three {
+  display: flex;
+  padding-bottom: 18px;
+  justify-content: space-between;
+}
+
+.symbol {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.row-one .symbol {
+  background: #b589d6;
+  margin-right: -8px;
+}
+
+.row-two .symbol {
+  background: #9bd4f5;
+  margin-right: 13px;
+}
+
+.row-three .symbol {
+  background: #ffa54f;
+}
+
+.details {
+  margin-left: -60px;
+  line-height: 1.2;
+}
+
+//   .company {
+//     font-size: 18px;
+//     color: #666;zz
+//   }
+
+
+//   .type {
+//     font-size: ;
+//     color: #999;
+//   }
+
+.transaction-grid .fa-dollar-sign {
+  color: #fcf5f5;
+  font-size: 14px;
+}
+
+.transaction-grid .amount {
+  font-size: 20px;
+  color: #666;
+}
+
+.transaction-grid .noughts {
+  font-size: 16px;
+}
+
+.icon-bar {
+  bottom: 60px;
+  background: #f7f7f7;
+  height: 70px;
+  width: 100%;
+  border-radius: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-bar i {
+  padding: 30px;
+  color: #c1c1c1;
+  font-size: 16px;
+}
+
+.icon-bar i.active {
+  color: #b589d6;
+}
+
+ion-content{
+    --background:white ;
+  }
+
+  
+.bg {
+  width: 100%;
+  height: 7vh;
+  background: radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%);
+  background-size: 400% 100%;
+  animation: bg 20s infinite;
+}
+
+@keyframes bg {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+
+}
+
+.balance {
+
+ 
+
+  &__type {
+      width: 100%;
+      padding: .8rem .8rem .8rem 1.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: .8rem;
+      box-shadow: 0px 6px 14px rgba(99, 85, 155, 0.4);
+      h2 {font-size: 1.4rem;}
+      p { font-size: 1.4rem; 
+          font-weight: 600;}
+      span {font-size: 2rem;}
+  }
+
+
+  
+}

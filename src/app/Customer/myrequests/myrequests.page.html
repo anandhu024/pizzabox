@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>My Requests </ion-title>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+  <ion-button fill="solid" [routerLink]= "['/Customer/acceptrequests']" shape="round" color="success" size="medium">
+    My Orders
+  </ion-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+<!-- <ion-button fill="solid" [routerLink]= "['/Customer/rejectrequests']" shape="round" color="danger" size="medium">
+    Rejected Requests
+  </ion-button> -->
+<!-- <ion-card *ngFor="let c of request;">
+    <ion-card-header>
+      <ion-card-title>{{c.itemname}}</ion-card-title> -->
+<!-- <ion-card-subtitle></ion-card-subtitle> -->
+<!-- </ion-card-header>
+  
+    <ion-card-content>
+      Product Description :- {{c.itemdescription}} <br>
+       Delivery Date :- {{c.formatdate}} <br>
+       item price :- {{c.itemamount}} <br>
+       item quantity :- {{c.itemquantity}} <br>
+
+       <button class="btn btn-danger" (click)="delete(c.collection_requestsId)">Remove</button>
+    </ion-card-content>
+
+    
+  </ion-card>
+
+  <ion-button type="submit" (click)="submit()" shape="round"  >Procced:  {{total}}
+    
+  </ion-button>
+</ion-content> -->
+
+
+
+<ion-content>
+  <ion-button fill="solid" [routerLink]= "['/Customer/acceptrequests']" shape="round" color="success" size="medium">
+    My Orders
+  </ion-button>
+
+  <ion-item *ngFor="let c of request;">
+    <figure class="snip1171 orange" style="margin-left: 30px;">
+      <img [src]="c.image">
+      <div class="price"> ₹{{c.itemamount}}
+        </div>
+        <br>
+
+
+        <br>
+        <figcaption>
+          <h3> {{c.itemname}}</h3>
+
+
+          <br>
+
+
+          Description :- {{c.itemdescription}}
+
+
+          <br>
+
+          category name:- {{c.itemquantity}}
+
+          <br>
+
+
+          Item price :- {{c.itemprice}}
+
+          <br>
+
+
+          Pizza Size :- {{c.formatdate}}
+
+          <br><br>
+          <!-- <ion-button  color="success" [routerLink]= "['/Admin/pizzaedit',p.collection_pizzaId]">Edit</ion-button> -->
+
+
+          <a (click)="delete(c.collection_requestsId)">Remove</a>
+
+        </figcaption>
+    </figure>
+
+
+
+  </ion-item>
+
+
+  <ion-button type="submit" (click)="submit()" shape="round">Procced: {{total}}
+
+  </ion-button>
+</ion-content>

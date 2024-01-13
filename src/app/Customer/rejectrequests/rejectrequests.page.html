@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      <ion-title> Reject Requests </ion-title>
+
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+  <ion-button fill="solid" [routerLink]= "['/Customer/myrequests']" shape="round" color="success" size="medium">
+    Go Back
+  </ion-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!-- <ion-button fill="solid" [routerLink]= "['/customer/rejectrequests']" shape="round" color="danger" size="medium">
+    Rejected Requests
+  </ion-button> -->
+  <ion-card *ngFor="let c of reject;">
+    <ion-card-header>
+      <ion-card-title> Customer Name :- {{c.customername}}</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+  
+    <ion-card-content>
+      Product Name : {{c.pizzaname}} {{c.dessertname}}<br>
+      Product Description : {{c.pizzadescription}} {{c.dessertsdescription}} <br>
+       Delivery Date : {{c.formatdate}} {{c.formatdate1}} <br>
+
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

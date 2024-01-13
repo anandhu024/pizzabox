@@ -1,0 +1,83 @@
+ion-content{
+    --background: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
+    url("../../../assets/img/pizz.jpg") no-repeat center center /cover ;
+}
+
+.login-section{
+    height: 82vh;
+    width: 100%;
+    max-width: 500px;
+    background:rgb(34, 34, 34);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+
+    .heading{
+        margin-top: 5px;
+        h1{
+            font-size: 1.6rem;
+            color: #efeaea;
+            font-weight: bolder;
+        }
+        p{
+            margin-top: 10px;
+            font-size: 1rem;
+            color: rgb(247, 241, 236);
+        }
+    }
+    .login-form{
+        .form-input{
+            position: relative;
+            margin-bottom: 10px;
+            ion-item:part(native){
+                padding: 0;
+            }
+            ion-icon{
+                position: absolute;
+                top: 37px;
+                z-index: 2;
+                font-size: 1.2rem;
+                left: 5px;
+            }
+            ion-label{
+                position: absolute;
+                margin-left: 35px;
+                font-weight: bolder;
+                font-size: 0.8rem;
+                top: 3px;
+            }
+            ion-input{
+                font-size: 0.9rem;
+                --padding-start:36px;
+                --padding-top:36px;
+                color: #f8f0f0;
+            }
+        }
+    }
+    .action-button{
+        text-align: center;
+        .login-button{
+            --background-color:#f9b801;
+            width: 200px;
+            font-weight: bold;
+        }
+        // p{
+        //     margin-top: 15px;
+        //     font-size: 1rem;
+        //     color: #dcd3d3;
+        // }
+        .signup-button{
+            --border-color:#3312d6;
+            --background:#241568;
+
+            // -color:#000000;
+            font-weight: bold;
+            margin-top: 100%;
+            width: 100%;
+        }
+    }
+}

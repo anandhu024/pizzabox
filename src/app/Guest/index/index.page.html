@@ -1,0 +1,36 @@
+
+
+
+  <ion-content [fullscreen]="true" pager="true" >
+    <ion-slides #slides pager="true" >
+    <ion-slide 
+    [style.background-image]="'url(../../../assets/img/screen4.jpg)'" class="topRight">
+    <ion-button fill="clear" color="light" [routerLink]= "['/Guest/signin']" >SKIP</ion-button>
+    <h6 class="bottom">Swipe right>>>></h6>
+  </ion-slide>
+
+  <ion-slide 
+    [style.background-image]="'url(../../../assets/img/image.png)'" class="topRight">
+    <ion-button fill="clear" color="light" [routerLink]= "['/Guest/signin']" >SKIP</ion-button>
+<h5>-A Slice A Day Keeps The Sad Away-</h5>
+
+    <h4 class="bottom">>>>></h4>
+
+  </ion-slide>
+
+  <ion-slide 
+    [style.background-image]="'url(../../../assets/img/screen3.jpg)'" class="topRight" >
+  <ion-button fill="clear" color="light" [routerLink]= "['/Guest/adminlogin']" >?</ion-button>
+
+    <ion-button  expand="block" fill="solid" color="danger" class="transformButton" id="LetsStart">
+      <ion-text color="light" [routerLink]= "['/Guest/signin']" >Let's Start</ion-text>
+    </ion-button>
+    <p>Are You New Here!</p>
+    <ion-button expand="block" fill="solid" color="medium" class="transformButton1" id="LetsStart1">
+      <ion-text color="light" [routerLink]= "['/Guest/signup']">Create an account</ion-text>
+    </ion-button>
+  </ion-slide>
+
+
+  </ion-slides>
+  </ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+      <ion-title>Feedback</ion-title>
+ 
+  </ion-toolbar>
+</ion-header>
+<ion-card-content>
+  <ion-button class="plus" fill="outline"    [routerLink]= "['/Customer/fedback']">complaint Box
+  </ion-button>
+
+</ion-card-content>
+
+
+
+<ion-content>
+  <!-- <ion-button fill="solid" [routerLink]= "['/Customer/acceptrequests']" shape="round" color="success" size="medium">
+    My Orders
+  </ion-button> -->
+
+  <ion-item *ngFor="let c of fedback;">
+    <figure class="snip1171 orange" style="margin-left: 30px;">
+      <img [src]="c.image">
+     <!--  <div class="price"> ₹{{c.itemamount}}
+        </div> -->
+        <br>
+
+
+        <br>
+        <figcaption>
+          <!-- <h3> {{c.complaint}}</h3> -->
+
+
+          <br>
+
+
+          Feedback :- {{c.complaint}}
+
+
+          <br>
+
+          Waitingfor Admin Replay:- {{c.rcomplaint}}
+
+        <!--  <br>
+
+
+          Pizza Size :- {{c.formatdate}} -->
+
+          <br><br>
+          <!-- <ion-button  color="success" [routerLink]= "['/Admin/pizzaedit',p.collection_pizzaId]">Edit</ion-button> -->
+
+
+          <!-- <a (click)="delete(c.collection_requestsId)">Remove</a> -->
+
+        </figcaption>
+    </figure>
+
+
+
+  </ion-item>
+
+
+  <!-- <ion-button type="submit" (click)="submit()" shape="round">Procced: {{total}} -->
+
+  <!-- </ion-button> -->
+</ion-content>

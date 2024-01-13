@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card>
+<ion-button class="btn btn-success" shape="round" color="danger" [routerLink]= "['/Admin/viewpizza']" >Back</ion-button>
+</ion-card>
+<ion-content>
+  <ion-content>
+    <ion-card color="light" *ngFor="let p of payment;">
+      <ion-card-content>
+        <ion-card-subtitle>
+
+          <ion-card-title>
+        Customer Name :- {{p.customername}}
+      </ion-card-title><br>
+       Payment Amount :- {{p.paymentamount}}<br><br>
+
+       
+        Card type :- {{p.cardtype}}<br><br>
+
+       
+        Payment Status :- {{p.status}}<br><br>
+      </ion-card-subtitle>
+      
+        <!-- <ion-button class="btn btn-success" color="danger" (click)="request(r.customername,r.formatdate)">Payment Details</ion-button> -->
+      
+      </ion-card-content>
+   
+  </ion-card>
+      
+  </ion-content>
+
+
+</ion-content>

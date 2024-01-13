@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+      <ion-title>Feedback</ion-title>
+ 
+  </ion-toolbar>
+</ion-header>
+<ion-card-content>
+  <!-- <ion-button class="plus" fill="outline"    [routerLink]= "['/Customer/fedback']">complaint Box
+  </ion-button> -->
+
+</ion-card-content>
+
+
+
+
+<ion-content>
+  <!-- <ion-icon name="add-circle-outline"[routerLink]= "['/Admin/powreg']"></ion-icon> -->
+  
+    <ion-item *ngFor="let c of fedback;">
+    <figure class="snip1171 orange"style="margin-left: 30px;">
+      <img [src]="c.image" >
+      <!-- <div class="price"> ₹{{d.itemamount}} -->
+  <!-- </div> -->
+        <br>
+        
+          
+              <br>
+              <figcaption>
+              
+         <h3>Customer complaint: {{c.complaint}}</h3>
+        
+       
+        <br>
+        
+        
+        <!-- Delivery date :- {{d.formatdate}} -->
+        
+        
+        <br>
+        
+        Replay from u.:- {{c.rcomplaint}}
+       
+        <br><br>
+        <!-- <ion-button  color="success" [routerLink]= "['/Admin/dessertsedit',d.collection_dessertId]">Edit</ion-button> -->
+   
+           
+                  <a [routerLink]= "['/Admin/fedbackedit',c.collection_fedbackId]">View More..</a>
+            
+                </figcaption>
+            </figure>
+          
+  </ion-item>
+  
+  </ion-content>

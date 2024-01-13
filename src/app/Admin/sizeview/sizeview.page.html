@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Pizza Size Registration View</ion-title>
+  </ion-toolbar>
+  <ion-card-content>
+    <ion-button fill="outline" class="plus" [routerLink]= "['/Admin/size']">
+      +
+    </ion-button>
+  </ion-card-content>
+</ion-header>
+
+
+
+
+
+
+<ion-content>
+  <!-- <ion-icon name="add-circle-outline"[routerLink]= "['/Admin/powreg']"></ion-icon> -->
+  
+    <ion-item *ngFor="let s of size;">
+    <figure class="snip1171 orange"style="margin-left: 30px;">
+      <!-- <img [src]="p.image" > -->
+      <!-- <div class="price"> ₹{{p.Price}} -->
+  <!-- </div> -->
+        <br>
+        
+          
+              <br>
+              <figcaption>
+         <h3> {{s.Size}}</h3>
+        
+       
+        <br>
+        
+        
+          Description :- {{s.sizedescription}}
+        
+        
+        <br>
+        
+          <!-- category name:- {{p.categoryname}} -->
+
+          <br>
+        
+        
+          <!-- Pizza Size :- {{p.sizename}} -->
+       
+        <br><br>
+        <!-- <ion-button  color="success" [routerLink]= "['/Admin/pizzaedit',p.collection_pizzaId]">Edit</ion-button> -->
+   
+           
+                  <a (click)="deletesize(s.collection_sizeId)">delete</a>
+            
+                </figcaption>
+            </figure>
+          
+  </ion-item>
+  
+  </ion-content>

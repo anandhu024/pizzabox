@@ -1,0 +1,100 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let p of profile;">
+    <ion-card-subtitle>
+
+      <ion-card-title>
+      Customer Name :- {{p.name}}
+    </ion-card-title><br><br>
+      Address :- {{p.address}}<br><br>
+   
+      Current Location :- {{p.place}}<br><br>
+   
+      Email :- {{p.email}}<br><br>
+    
+      Phone Number :- {{p.number}}<br><br>
+    
+      Password :- {{p.password}}<br><br>
+    </ion-card-subtitle>
+
+
+    <ion-button class="btn btn-success" color="success" [routerLink]= "['/Customer/profileedit',p.collection_signupId]">Edit</ion-button>
+  
+    <br><br>
+
+   <ion-item>
+    <ion-button class="btn btn-success" color="danger"
+    (click)="deletepizza(p.collection_pizzaId)">Delete</ion-button>
+  
+  </ion-item> -->
+  <!-- </ion-card>
+    
+</ion-content> --> 
+
+
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title> my Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let p of profile;">
+    <ion-card-header>
+      <ion-avatar>
+        <img src="../../../assets/img/images.png">
+      </ion-avatar>
+      <ion-card-title>{{ p.name }}</ion-card-title>
+      <ion-card-subtitle>{{ p.email }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Customer Name</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" readonly>{{ p.name }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call"></ion-icon>
+          <ion-label>Phone number</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="tel" readonly>{{ p.number }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Address</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" readonly>{{ p.address }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-label>Email</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" readonly>{{ p.email }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="location"></ion-icon>
+          <ion-label>Location</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" readonly>{{ p.place }}</ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-label>Password</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" readonly>********</ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-button expand="block" [routerLink]= "['/Customer/profileedit',p.collection_signupId]" >Edit</ion-button>
+  </ion-card>
+</ion-content>

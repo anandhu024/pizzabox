@@ -1,0 +1,109 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="update()" [formGroup]='signupedit'>
+  <ion-item fill="solid">
+    <ion-label position="floating">Customer Name</ion-label>
+    <ion-input type="text" formControlName="name" placeholder="Full Name"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Address</ion-label>
+    <ion-input type="text" formControlName="address" placeholder="Address"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Current Location</ion-label>
+    <ion-input type="text" formControlName="place" placeholder="Current Location"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating" >Email</ion-label>
+    <ion-input type="email" formControlName="email"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating" >Phone Number</ion-label>
+    <ion-input type="number" formControlName="number"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="Password" formControlName="password" placeholder="eg:123@/Aa"></ion-input>
+  </ion-item>
+
+  <ion-button type="submit" color="success" shape="round">UPDATE</ion-button>
+</form>
+
+</ion-content>
+
+ -->
+
+
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="update()" [formGroup]='signupedit'>
+  <ion-card >
+    <ion-card-header>
+      <ion-avatar>
+        <img src="../../../assets/img/images.png">
+      </ion-avatar>
+      <ion-card-title>    <ion-input align="center" formControlName="name" readonly placeholder="Full Name"></ion-input>      </ion-card-title>
+      <ion-card-subtitle>    <ion-input align="center" formControlName="email" readonly placeholder="Full Name"></ion-input>
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Customer Name</ion-label>&nbsp;&nbsp;&nbsp;
+    <ion-input type="text" formControlName="name" placeholder="Full Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call"></ion-icon>
+          <ion-label>Phone number</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="tel" formControlName="number" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Address</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" formControlName="address" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-label>Email</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" formControlName="email" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="location"></ion-icon>
+          <ion-label>Location</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" formControlName="place" placeholder="Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-label>Password</ion-label>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" formControlName="password" placeholder="Address"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-button type="submit" expand="block" >Save Changes</ion-button>
+  </ion-card>
+</form>
+</ion-content>

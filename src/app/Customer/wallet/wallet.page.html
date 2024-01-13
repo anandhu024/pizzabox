@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>My Wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-card>
+
+  <div class="main" >
+    <div class="plus" [routerLink]= "['/Customer/payment']">
+      <p>+</p>
+    </div>
+    <div class="main-text">
+      <p class="transactions">Income Details</p>
+    
+    </div>
+  </div>
+
+</ion-card>
+
+
+
+
+
+<ion-content>
+
+  <div  *ngFor="let w of wallet;"  style="width: auto;margin-top: auto;height: -webkit-fill-available;">
+
+    <div class="top">
+      
+      <div class="top-text">
+        <p class="balance"  style="font-size: 23px;color: white;margin-top: 30px;"><b>Total Coin</b></p>
+        <p class="amount"><i class="fas fa-dollar-sign"></i>₹{{w.amount}}<span class="noughts"></span> <i class="fas fa-caret-right"></i></p>
+      </div>
+
+  
+
+    </div>
+    </div>
+  
+ 
+  
+      
+      <div class="transaction-grid"> 
+         <div class="row-one"  style="margin-top: 15px;background: #7d606082;border-radius: 19px;" *ngFor="let c of myincome;">
+          <div class="details" style="margin-top: 15px;margin-left: 12px;margin-right: 25px;margin-top: 14px;">
+            <p class="company"><b>Income  :- {{c.itemprice}}</b></p>
+            <p class="type"><b>Item name :- {{c.itemname}}</b></p>
+            <p class="type"><b>{{c.formatdate}}</b></p> 
+       
+
+          </div>
+          <p class="amount" style="margin-right: 9px;margin-top: 10px;"><i class="fas fa-dollar-sign"></i>-₹{{c.itemamount}}<span class="noughts"></span></p>
+        </div> 
+        
+       </div>
+
+
+
+
+
+       <div class="transaction-grid"> 
+        <div class="row-one"  style="margin-top: 15px;background: #7d606082;border-radius: 19px;" *ngFor="let c of income;">
+         <div class="details" style="margin-top: 15px;margin-left: 12px;margin-right: 25px;margin-top: 14px;">
+           <p class="company"><b>Income  :- {{c.itemprice}}</b></p>
+           <p class="type"><b>Item name :- {{c.itemname}}</b></p>
+           <p class="type"><b>{{c.formatdate}}</b></p> 
+      
+
+         </div>
+         <p class="amount" style="margin-right: 9px;margin-top: 10px;"><i class="fas fa-dollar-sign"></i>+₹{{c.itemamount}}<span class="noughts"></span></p>
+       </div> 
+       
+      </div>
+  
+   
+</ion-content>

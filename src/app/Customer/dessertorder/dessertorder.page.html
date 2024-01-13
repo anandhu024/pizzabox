@@ -1,0 +1,128 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Pizza Box</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="order()" [formGroup]='dessertorder'>  
+
+    <ion-item *ngFor="let d of dessert;">
+      <div>
+       <img [src] ="d.image" width="100px">
+       </div>
+  <ion-input type="filereadonly" readonly id="name" (change)="handlefile($event)"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Dessert Name</ion-label>
+      <ion-input type="text" readonly formControlName="dessertname"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Dessert Description</ion-label>
+      <ion-input type="text" readonly formControlName="dessertsdescription"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dessert Price</ion-label>
+      <ion-input type="number" readonly formControlName="dessertsprice"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label position="floating">Delivery date</ion-label> -->
+      <!-- <ion-input type="date" hidden formControlName="date"></ion-input> -->
+    <!-- </ion-item> -->
+
+    <!-- <ion-item>
+      <ion-label position="floating">Dessert Quantity</ion-label>
+      <ion-input type="number" formControlName="dessertsquantity" (ionChange)="view()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Delivery Address</ion-label>
+      <ion-input type="text" formControlName="dessertsaddress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Total Amount</ion-label>
+      <ion-input type="numberreadonly" readonly formControlName="dessertsamount" value="{{totalamount}}" placeholder="{{totalamount}}"></ion-input>
+    </ion-item>
+
+<ion-item>
+    <ion-button type="submit" shape="round" >ORDER</ion-button>
+  </ion-item>
+  </form>
+
+</ion-content>  -->
+
+
+<ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/Customer/orindex">
+        <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/tabs/orindex">
+        <ion-icon slot="icon-only" color="light" name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div> 
+
+
+  <!-- food images -->
+ <form (ngSubmit)="order()" [formGroup]='dessertorder'>  
+  <div class="card" >
+    <div class="images" *ngFor="let d of dessert;">
+      <ion-img [src]="d.image"></ion-img>
+    </div> 
+
+   <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin"> 
+          <ion-input type="text" readonly formControlName="dessertname"></ion-input>
+
+        </h1>
+        <p class="ion-no-margin">
+          <ion-input type="number" readonly formControlName="dessertsprice">₹</ion-input>
+        </p>
+      </div>
+    </div>
+      <ion-input type="date" hidden formControlName="date"></ion-input>
+
+    <div class="about">
+      <h1>Dessert Description</h1>
+      <p>
+        <ion-input type="text" readonly formControlName="dessertsdescription"></ion-input>
+
+      </p>
+    </div>
+
+   
+
+    <div class="about">
+      <h1>Dessert Quantity</h1>
+      <p>
+        <ion-input type="number" formControlName="dessertsquantity" (ionChange)="view()"></ion-input>
+
+      </p>
+    </div>
+
+ 
+
+    <ion-button type="submit" shape="round" readonly >Pay:
+      <ion-input readonly formControlName="dessertsamount" value="{{totalamount}}" placeholder="{{totalamount}}"></ion-input>
+
+    </ion-button>
+
+
+  </div>
+</form> 
+
+</ion-content> 

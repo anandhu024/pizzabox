@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+    <ion-title>Category Regestration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <form (ngSubmit)="submit()" [formGroup]='Categoryreg'>
+      <div class="container" >
+        <div class="title"><b><h2>Category Regestration</h2></b></div><br>
+        <label><b>Category Name</b></label>
+        <input type="text" placeholder="Category Name" formControlName="categoryname" style="color: white;">
+
+        <label><b>Description Name</b></label>
+        <input type="text" placeholder="Category Description"  formControlName="categorydescription" style="color: white;" >
+     
+        <!-- <label><b>Last Name</b></label> (change)="this.changePhoneNumber()"
+        <input type="text" placeholder="Enter Last Name" > -->
+
+        <!-- <label><b>Email Address</b></label>
+        <input type="text" placeholder="Enter Email Address"  formControlName="email" style="color: white;" >
+        
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" formControlName="password" style="color: white;"> -->
+        
+        <!-- <label><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" > -->
+
+        <!-- <label><b>Gender</b></label>
+        <div>
+            <select class="custom_select">
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+         -->
+        
+         <button _ngcontent-pfy-c143="" type="submit">Submit</button>
+         <!-- <p>Have an account? <a href="Guest/signin">SignIn</a></p> -->
+  </div>
+    </form>
+    </ion-content>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+      <ion-title>Category Registration View</ion-title>
+ 
+  </ion-toolbar>
+  <ion-card-content>
+    <ion-button class="plus" fill="outline"    [routerLink]= "['/Admin/category']">+
+    </ion-button>
+  
+  </ion-card-content>
+</ion-header>
+
+
+
+
+
+
+<ion-content>
+
+  
+    <ion-item *ngFor="let c of category;">
+    <figure class="snip1171 orange"style="margin-left: 30px;">
+ 
+        <br>
+        
+          
+              <br>
+              <figcaption>
+         <h3> {{c.categoryname}}</h3>
+        
+       
+        <br>
+        
+        
+          Description :- {{c.categorydescription}}
+        
+        
+        <br>
+        
+         
+
+          <br>
+        
+    
+       
+        <br><br>
+     
+   
+           
+                  <a (click)="deleteproduct(c.collection_categoryId)">delete</a>
+            
+                </figcaption>
+            </figure>
+          
+  </ion-item>
+  
+  </ion-content>

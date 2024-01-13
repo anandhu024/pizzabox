@@ -1,0 +1,47 @@
+
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      </ion-buttons>
+<ion-content>
+      <ion-grid class="container">
+        <ion-row class="ion-align-items-end">
+          <ion-col size="6" class="red" [routerLink]= "['/Admin/pizzaview']" >PIZZA REGISTRATION</ion-col>
+          <ion-col size="6" class="green"  [routerLink]= "['/Admin/dessertsview']"> DESSERTS REGISTRATION</ion-col>
+        <!-- </ion-row>
+        <ion-row class="ion-align-items-end"> -->
+          <ion-col size="6" class="blue" [routerLink]= "['/Admin/viewpizza']">REQUESTS</ion-col>
+          <ion-col size="6" class="purple" [routerLink]= "['/Admin/reports']">REPORTS</ion-col>
+        </ion-row>
+      </ion-grid>
+
+    
+        <ion-card color="primary">
+          <ion-card-header>
+            <ion-card-title>REQUESTS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{rlength}}</ion-card-title>
+            
+          </ion-card-header>
+        
+          
+        </ion-card>
+
+        <ion-card color="warning">
+          <ion-card-header>
+            <ion-card-title>PIZZA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{pizzalength}}</ion-card-title>
+        
+          </ion-card-header>
+        
+        </ion-card>
+
+        <ion-card color="medium">
+          <ion-card-header>
+            <ion-card-title>DESSERTS  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dessertlength}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card color="dark">
+          <ion-card-header>
+            <ion-card-title>FEEDBACKS  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{fedbacklength}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+    </ion-content>   
+  
